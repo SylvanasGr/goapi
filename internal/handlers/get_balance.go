@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/SylvanasGr/goapi/api"
-	"github.com/SylvanasGr/goapi/internal/tools"
+	"github.com/SylvanasGr/api"
+	"github.com/SylvanasGr/internal/tools"
 	"github.com/gorilla/schema"
 	log "github.com/sirupsen/logrus"
 )
 
 func GetBalance(w http.ResponseWriter, r *http.Request) {
-	var params = api.BalanceParams{}
+	var params = api.UserBalanceParams{}
 	var decoder *schema.Decoder = schema.NewDecoder()
 	var err error
 
@@ -24,9 +24,8 @@ func GetBalance(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var database *tools.DatabaseInterface
-	database, err = tools.NewDatabase
+	database, err = tools.NewDatabase()
 	if err != nil {
-		log.Error(err)
 		api.InternalErrorHandler(w)
 		return
 	}
@@ -39,17 +38,16 @@ func GetBalance(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var response = api.BalanceResponse{
+	var response = api.UserBalanceResponse{
 		Balance: (*tokenDetails).Balance,
 		Code:    http.StatusOK,
 	}
 
-	w.Header().Set("Content-type", "application/json")
+	w.Header().Set("Content-Type", "application/json")
 	err = json.NewEncoder(w).Encode(response)
 	if err != nil {
 		log.Error(err)
 		api.InternalErrorHandler(w)
 		return
 	}
-
 }

@@ -10,7 +10,7 @@ var mockLoginDetails = map[string]LoginDetails{
 
 	"konstantinos": {
 		AuthToken: "kon-token",
-		Username: "kon",
+		Username: "konstantinos",
 	},
 	"john": {
 		AuthToken: "john-token",
@@ -27,7 +27,7 @@ var mockBalanceDetails = map[string]BalanceDetails{
 
 	"konstantinos": {
 		Balance: 100,
-		Username: "kon",
+		Username: "konstantinos",
 	},
 	"john": {
 		Balance: 300,

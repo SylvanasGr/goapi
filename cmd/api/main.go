@@ -1,11 +1,10 @@
 package main
 
-import(
+import (
 	"fmt"
 	"net/http"
-
+	"github.com/SylvanasGr/internal/handlers"
 	"github.com/go-chi/chi"
-	"github.com/SylvanasGr/goapi/internal/handlers"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -18,5 +17,5 @@ func main(){
 	err := http.ListenAndServe("localhost:9000",r)
 	if err != nil {
 		log.Error(err)
-	}
+	} 
 }

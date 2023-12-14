@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+type UserBalanceParams struct{
+	Username string
+}
+
 type UserBalanceRequest struct{
 	Username string
 }
