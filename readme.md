@@ -38,10 +38,10 @@ Description: Brief description of the third Go project.
 
 - **Experimentation**: Feel free to modify code, test different approaches, and learn from the process.
 - **Documentation**: Keep notes on your observations, best practices, and any challenges faced.
-- **Communication**: Share your findings with the community, ask questions, and seek feedback.
+- **Communication**: Share your opinion or comments, the purpose of this repo is to learn better code :).
 
 ## Note
 
-Remember that the master branch is reserved for integrating well-explored and tested code. At this stage, focus on exploration and understanding without the pressure of merging everything together.
+Remember that the master branch is only for create a new branch there is no need to merge it after you finished.
 
 Happy exploring!
